@@ -7,6 +7,8 @@ The Study Zone is a place to...
 - Write rationales for different ways of solving an algorithm
 - Talk about what I've learned
 
+<img src="https://i.imgur.com/68aRd2J.png"  width="600">
+
 ## Models
 
 Algorithm
