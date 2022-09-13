@@ -7,8 +7,6 @@ The Study Zone is a place to...
 - Write rationales for different ways of solving an algorithm
 - Talk about what I've learned
 
-<img src="https://i.imgur.com/68aRd2J.png"  width="600">
-
 ## Models
 
 Algorithm
@@ -41,5 +39,7 @@ Solution
 - DifficultyLevel has_many Algorithms
 - Algorithm has_many Solutions
 - Solution belongs_to Algorithm
+
+<img src="https://i.imgur.com/eRQSbrq.png"  width="800">
 
 ## User stories
