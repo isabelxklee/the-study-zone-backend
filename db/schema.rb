@@ -10,12 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_13_005636) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_13_152848) do
   create_table "algorithms", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "category_id"
+    t.integer "difficulty_level_id"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -36,6 +38,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_13_005636) do
     t.string "space_complexity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "algorithm_id"
   end
 
 end
