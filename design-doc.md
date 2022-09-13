@@ -13,11 +13,21 @@ Algorithm
 
 - title :string
 - description :string
-- test_case_example :string
 - category_id :foreign_key
+- difficulty_level_id :foreign_key
 
 Category
 
 - title :string
+
+DifficultyLevel
+
+- title :string
+
+Solution
+
+- explanation :string
+- time_complexity :string
+- space_complexity :string
 
 ## User stories
