@@ -33,14 +33,15 @@ Solution
 
 ## Associations
 
-- Algorithm belongs_to Category
-- Category has_many Algorithms
-- Algorithm belongs_to DifficultyLevel
-- DifficultyLevel has_many Algorithms
-- Algorithm has_many Solutions
-- Solution belongs_to Algorithm
+- Algorithm `belongs_to` Category
+- Category `has_many` Algorithms
+- Algorithm `belongs_to` DifficultyLevel
+- DifficultyLevel `has_many` Algorithms
+- Algorithm `has_many` Solutions
+- Solution `belongs_to` Algorithm
 
 ## Domain Model
+
 <img src="https://i.imgur.com/eRQSbrq.png"  width="800">
 
 ## User stories
