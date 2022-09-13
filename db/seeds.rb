@@ -19,8 +19,8 @@ lvl1 = DifficultyLevel.create(title: "Easy")
 lvl2 = DifficultyLevel.create(title: "Medium")
 lvl3 = DifficultyLevel.create(title: "Hard")
 
-Algorithm.create(title: "Test", description: "This is a test.", category_id: cat_string.id, difficulty_level_id: lvl1.id)
+algo1 = Algorithm.create(title: "Test", description: "This is a test.", category_id: cat_string.id, difficulty_level_id: lvl1.id)
+
+Solution.create(explanation: "This is a test.", time_complexity: "O(n)", space_complexity: "O(n)", algorithm_id: algo1.id)
 
 puts "data has been seeded! 🍃"
-
-rails generate migration AddUserRefToProducts user:references
