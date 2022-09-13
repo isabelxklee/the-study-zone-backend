@@ -12,9 +12,9 @@ The Study Zone is a place to...
 Algorithm
 
 - title :string
-- description :string
-- category_id :foreign_key
-- difficulty_level_id :foreign_key
+- description :text
+- category_id :int
+- difficulty_level_id :int
 
 Category
 
@@ -26,10 +26,10 @@ DifficultyLevel
 
 Solution
 
-- explanation :string
+- explanation :text
 - time_complexity :string
 - space_complexity :string
-- algorithm_id
+- algorithm_id :int
 
 ## Associations
 
