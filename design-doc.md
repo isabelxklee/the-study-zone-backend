@@ -40,6 +40,7 @@ Solution
 - Algorithm has_many Solutions
 - Solution belongs_to Algorithm
 
+## Domain Model
 <img src="https://i.imgur.com/eRQSbrq.png"  width="800">
 
 ## User stories
