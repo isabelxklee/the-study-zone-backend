@@ -29,5 +29,15 @@ Solution
 - explanation :string
 - time_complexity :string
 - space_complexity :string
+- algorithm_id
+
+## Associations
+
+- Algorithm belongs_to Category
+- Category has_many Algorithms
+- Algorithm belongs_to DifficultyLevel
+- DifficultyLevel has_many Algorithms
+- Algorithm has_many Solutions
+- Solution belongs_to Algorithm
 
 ## User stories
