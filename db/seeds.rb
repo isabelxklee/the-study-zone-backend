@@ -8,14 +8,19 @@
 
 Category.destroy_all
 DifficultyLevel.destroy_all
+Algorithm.destroy_all
 
-Category.create(title: "String")
-Category.create(title: "Array")
-Category.create(title: "Linked List")
-Category.create(title: "Binary Tree")
+cat_string = Category.create(title: "String")
+cat_array = Category.create(title: "Array")
+cat_linked_list = Category.create(title: "Linked List")
+cat_binary_tree = Category.create(title: "Binary Tree")
 
-DifficultyLevel.create(title: "Easy")
-DifficultyLevel.create(title: "Medium")
-DifficultyLevel.create(title: "Hard")
+lvl1 = DifficultyLevel.create(title: "Easy")
+lvl2 = DifficultyLevel.create(title: "Medium")
+lvl3 = DifficultyLevel.create(title: "Hard")
+
+Algorithm.create(title: "Test", description: "This is a test.", category_id: cat_string.id, difficulty_level_id: lvl1.id)
 
 puts "data has been seeded! 🍃"
+
+rails generate migration AddUserRefToProducts user:references
