@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'categories/index'
+  get 'categories/show'
+  get 'categories/new'
   if Rails.env.development?
     mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
   end
