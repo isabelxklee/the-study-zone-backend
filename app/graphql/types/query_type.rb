@@ -8,12 +8,12 @@ module Types
       Algorithm.all
     end
 
-    field :algorithm, AlgorithmType, "Find an algorithm by ID" do 
+    field :algorithm, Types::AlgorithmType, "Find an algorithm by ID" do 
       argument :id, ID
     end
 
     def algorithm(id:)
-      Algorithm.find(:id)
+      Algorithm.find(id)
     end
   end
 end
