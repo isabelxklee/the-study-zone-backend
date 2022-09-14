@@ -5,7 +5,7 @@ class Mutations::CreateAlgorithm < Mutations::BaseMutation
   argument :category, Types::CategoryType
   argument :difficulty_level, Types::DifficultyLevelType
 
-  field :algorithm, Types::Algorithm
+  field :create_algorithm, Types::Algorithm
   field :errors, [String], null: false
 
   def resolve(title:, description:, category:, difficulty_level:)
