@@ -5,13 +5,5 @@ class AlgorithmsController < ApplicationController
 
   def show
     @algo = Algorithm.find(params[:id])
-    query_string = "{
-      algorithm {
-        title
-        description
-      }
-    }"
-    
-    MySchema.execute(query_string)
   end
 end
