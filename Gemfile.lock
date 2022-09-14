@@ -222,7 +222,7 @@ DEPENDENCIES
   capybara
   debug
   graphiql-rails
-  graphql (~> 2.0.14)
+  graphql (~> 2.0.9)
   importmap-rails
   jbuilder
   puma (~> 5.0)
