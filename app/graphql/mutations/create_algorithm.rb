@@ -1,4 +1,4 @@
-class Mutations::Algorithm < Mutations::BaseMutation
+class Mutations::CreateAlgorithm < Mutations::BaseMutation
   argument :title, String 
   argument :description, String 
   argument :category, Types::CategoryType

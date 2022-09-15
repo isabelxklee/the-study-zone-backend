@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Types
   class MutationType < Types::BaseObject
     description "The query root of this schema"
@@ -10,9 +12,9 @@ module Types
       Category.new(title: title)
     end
 
-    field :create_algorithm, Types:AlgorithmType, "Create a new algorithm." do 
+    field :create_algorithm, Types::AlgorithmType, "Create a new algorithm." do 
       argument :title, String 
-      argumnet :description, String 
+      argument :description, String 
       argument :category, Types::CategoryType 
       argument :difficulty_level, Types::DifficultyLevelType
     end
