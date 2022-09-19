@@ -1,7 +1,7 @@
 class Mutations::CreateCategory < Mutations::BaseMutation
   argument :title, String 
 
-  field :category, Types::Category
+  field :category, Types::CategoryType
   field :errors, [String], null: false
 
   def resolve(title:)
