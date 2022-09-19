@@ -15,12 +15,12 @@ module Types
     field :create_algorithm, Types::AlgorithmType, "Create a new algorithm." do 
       argument :title, String 
       argument :description, String 
-      argument :category, Types::CategoryType 
-      argument :difficulty_level, Types::DifficultyLevelType
+      argument :category_id, ID
+      argument :difficulty_level_id, ID
     end
 
-    def create_algorithm(title:, description:, category:, difficulty_level:)
-      Algorithm.new(title: title, description: description, category: category, difficulty_level: difficulty_level)
+    def create_algorithm(title:, description:, category_id:, difficulty_level_id:)
+      Algorithm.new(title: title, description: description, category: category_id, difficulty_level: difficulty_level_id)
     end
   end
 end
