@@ -1,4 +1,4 @@
-class StudyZoneSchema < GraphQL::Schema
+class RailsAppSchema < GraphQL::Schema
   mutation(Types::MutationType)
   query(Types::QueryType)
 

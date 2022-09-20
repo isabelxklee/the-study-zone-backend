@@ -1,4 +1,4 @@
 class Category < ApplicationRecord
   has_many :algorithms
-  validates :title, presence: true
+  validates :name, presence: true
 end

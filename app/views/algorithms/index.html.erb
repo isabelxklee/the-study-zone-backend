@@ -1,7 +1,14 @@
-<h1>All Algorithms</h1>
+<p style="color: green"><%= notice %></p>
 
-<% @algos.each do |algo| %>
-  <ul>
-    <li><%= algo.title %></li>
-  </ul>
-<% end %>
+<h1>Algorithms</h1>
+
+<div id="algorithms">
+  <% @algorithms.each do |algorithm| %>
+    <%= render algorithm %>
+    <p>
+      <%= link_to "Show this algorithm", algorithm %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New algorithm", new_algorithm_path %>

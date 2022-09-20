@@ -15,5 +15,17 @@ module Types
     def algorithm(id:)
       Algorithm.find(id)
     end
+
+    field :difficulties, [Types::DifficultyType], "Fetch all existing difficulty levels."
+
+    def difficulties
+      DifficultyLevel.all
+    end
+
+    field :categories, [Types::CategoryType], "Fetch all existing categories."
+
+    def categories
+      Category.all
+    end
   end
 end
