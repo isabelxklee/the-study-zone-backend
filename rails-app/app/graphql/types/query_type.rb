@@ -1,17 +1,31 @@
 module Types
-  class QueryType < Types::BaseObject
-    # Add `node(id: ID!) and `nodes(ids: [ID!]!)`
-    include GraphQL::Types::Relay::HasNodeField
-    include GraphQL::Types::Relay::HasNodesField
+  class QueryType < GraphQL::Schema::Object
+    description "The query root of this schema"
 
-    # Add root-level fields here.
-    # They will be entry points for queries on your schema.
+    field :algorithms, [Types::AlgorithmType], "Fetch all existing algorithms."
 
-    # TODO: remove me
-    field :test_field, String, null: false,
-      description: "An example field added by the generator"
-    def test_field
-      "Hello World!"
+    def algorithms
+      Algorithm.all
+    end
+
+    field :algorithm, Types::AlgorithmType, "Find an algorithm by its ID." do 
+      argument :id, ID
+    end
+
+    def algorithm(id:)
+      Algorithm.find(id)
+    end
+
+    field :difficulties, [Types::DifficultyType], "Fetch all existing difficulty levels."
+
+    def difficulties
+      DifficultyLevel.all
+    end
+
+    field :categories, [Types::CategoryType], "Fetch all existing categories."
+
+    def categories
+      Category.all
     end
   end
 end
