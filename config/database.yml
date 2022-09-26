@@ -84,5 +84,5 @@ test:
 production:
   <<: *default
   database: the-study-zone-production
-  username: rails_app
-  password: <%= ENV["RAILS_APP_DATABASE_PASSWORD"] %>
+  username: the-study-zone
+  password: <%= ENV['THE_STUDY_ZONE_DATABASE_PASSWORD'] %>
