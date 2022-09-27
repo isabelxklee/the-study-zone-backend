@@ -4,6 +4,8 @@ class AlgorithmsController < ApplicationController
   # GET /algorithms or /algorithms.json
   def index
     @algorithms = Algorithm.all
+
+    render json: @algorithms
   end
 
   # GET /algorithms/1 or /algorithms/1.json

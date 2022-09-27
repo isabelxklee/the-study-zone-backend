@@ -5,10 +5,6 @@ Rails.application.routes.draw do
 
   post "/graphql", to: "graphql#execute"
 
-  get "/algorithms", to: "algorithms#index"
-  get "/categories", to: "categories#index"
-  get "/difficulties", to: "difficulties#index"
-
   resources :algorithms
   resources :difficulties
   resources :categories

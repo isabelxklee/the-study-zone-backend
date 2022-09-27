@@ -4,6 +4,8 @@ class DifficultiesController < ApplicationController
   # GET /difficulties or /difficulties.json
   def index
     @difficulties = Difficulty.all
+
+    render json: @difficulties
   end
 
   # GET /difficulties/1 or /difficulties/1.json
