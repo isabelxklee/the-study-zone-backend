@@ -1,5 +1,6 @@
 class DifficultiesController < ApplicationController
   before_action :set_difficulty, only: %i[ show edit update destroy ]
+  skip_before_action :verify_authenticity_token
 
   # GET /difficulties or /difficulties.json
   def index

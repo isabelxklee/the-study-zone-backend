@@ -1,5 +1,6 @@
 class AlgorithmsController < ApplicationController
   before_action :set_algorithm, only: %i[ show edit update destroy ]
+  skip_before_action :verify_authenticity_token
 
   # GET /algorithms or /algorithms.json
   def index
