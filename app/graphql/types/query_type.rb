@@ -19,7 +19,7 @@ module Types
     field :difficulties, [Types::DifficultyType], "Fetch all existing difficulty levels."
 
     def difficulties
-      DifficultyLevel.all
+      Difficulty.all
     end
 
     field :categories, [Types::CategoryType], "Fetch all existing categories."
