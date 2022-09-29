@@ -1,6 +1,5 @@
 class DifficultiesController < ApplicationController
-  before_action :set_difficulty, only: %i[ show edit update destroy ]
-  skip_before_action :verify_authenticity_token
+  before_action :set_category, only: [:show, :edit, :update, :destroy ]
 
   # GET /difficulties or /difficulties.json
   def index
@@ -11,6 +10,7 @@ class DifficultiesController < ApplicationController
 
   # GET /difficulties/1 or /difficulties/1.json
   def show
+    render json: @difficulty
   end
 
   # GET /difficulties/new
@@ -68,6 +68,6 @@ class DifficultiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def difficulty_params
-      params.require(:difficulty).permit(:name)
+      params.permit(:name)
     end
 end
