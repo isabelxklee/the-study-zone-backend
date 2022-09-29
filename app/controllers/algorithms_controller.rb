@@ -1,6 +1,5 @@
 class AlgorithmsController < ApplicationController
-  before_action :set_algorithm, only: %i[ show edit update destroy ]
-  skip_before_action :verify_authenticity_token
+  before_action :set_category, only: [:show, :edit, :update, :destroy ]
 
   # GET /algorithms or /algorithms.json
   def index
@@ -11,6 +10,7 @@ class AlgorithmsController < ApplicationController
 
   # GET /algorithms/1 or /algorithms/1.json
   def show
+    render json: @algorithm
   end
 
   # GET /algorithms/new
@@ -68,6 +68,6 @@ class AlgorithmsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def algorithm_params
-      params.require(:algorithm).permit(:name, :description, :category_id, :difficulty_id)
+      params.permit(:name, :description, :category_id, :difficulty_id)
     end
 end
