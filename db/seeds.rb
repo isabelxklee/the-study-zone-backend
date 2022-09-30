@@ -1,26 +1,22 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
-
 Category.destroy_all
 Difficulty.destroy_all
 Algorithm.destroy_all
 
-cat_string = Category.create(name: "String")
-cat_array = Category.create(name: "Array")
-cat_linked_list = Category.create(name: "Linked List")
-cat_binary_tree = Category.create(name: "Binary Tree")
+string = Category.create(name: "String")
+array = Category.create(name: "Array")
+linked_list = Category.create(name: "Linked List")
+binary_tree = Category.create(name: "Binary Tree")
 
-lvl1 = Difficulty.create(name: "Easy")
-lvl2 = Difficulty.create(name: "Medium")
-lvl3 = Difficulty.create(name: "Hard")
+easy = Difficulty.create(name: "Easy")
+medium = Difficulty.create(name: "Medium")
+hard = Difficulty.create(name: "Hard")
 
-algo1 = Algorithm.create(name: "Test", description: "This is a test.", category_id: cat_string.id, difficulty_id: lvl1.id)
+Algorithm.create(name: "Two Sum", description: "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order.", category_id: array.id, difficulty_id: easy.id)
 
-# Solution.create(explanation: "This is a test.", time_complexity: "O(n)", space_complexity: "O(n)", algorithm_id: algo1.id)
+Algorithm.create(name: "Palindrome Pairs", description: "Given a list of unique words, return all the pairs of the distinct indices (i, j) in the given list, so that the concatenation of the two words words[i] + words[j] is a palindrome.", category_id: string.id, difficulty_id: hard.id)
+
+Algorithm.create(name: "Trapping Rain Water", description: "Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.", category_id: array.id, difficulty_id: hard.id)
+
+Algorithm.create(name: "Binary Tree Paths", description: "Given the root of a binary tree, return all root-to-leaf paths in any order. A leaf is a node with no children.", category_id: binary_tree.id, difficulty_id: easy.id)
 
 puts "data has been seeded! 🍃"
