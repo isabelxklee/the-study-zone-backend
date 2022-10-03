@@ -6,19 +6,33 @@ The Study Zone is a place for me to document the algorithms that I've solved and
 
 ---
 
-## Features
-
-- Filter algorithms by category and difficulty level
-- Browse all algorithms
-
----
-
 ## Getting started
 
-Install Homebrew
+Install Homebrew.
 
-Install RVM
-Install Ruby and Rails
+```bash
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Install RVM (Ruby Version Manager).
+
+```bash
+$ gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+```
+
+Install Ruby using RVM.
+
+```bash
+$ \curl -sSL https://get.rvm.io | bash -s stable --ruby
+```
+
+Install Rails.
+
+```bash
+$ \curl -sSL https://get.rvm.io | bash -s stable --rails
+```
+
+Clone this repo and `cd` into the correct directory.
 
 Install all dependencies.
 
@@ -26,28 +40,24 @@ Install all dependencies.
 $ bundle install
 ```
 
-Create a Rails table.
+Create a database, migrations, and seed data.
 
 ```bash
 $ rails db:create
-```
-
-Migrate the...
-
-```bash
 $ rails db:migrate
-```
-
-Seed the data.
-
-```bash
 $ rails db:seed
 ```
 
-Open the Rails console and test out data.
+Open the Rails console and test out the data.
 
 ```bash
 $ rails c
+```
+
+Run the Rails server.
+
+```bash
+$ rails s
 ```
 
 ---
