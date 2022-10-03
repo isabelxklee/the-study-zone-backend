@@ -1,24 +1,60 @@
-# README
+# The Study Zone Backend 🛠
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Link to React app](https://github.com/isabelxklee/the-study-zone)
 
-Things you may want to cover:
+The Study Zone is a place for me to document the algorithms that I've solved and the different solutions I've come up with.
 
-* Ruby version
+---
 
-* System dependencies
+## Features
 
-* Configuration
+- Filter algorithms by category and difficulty level
+- Browse all algorithms
 
-* Database creation
+---
 
-* Database initialization
+## Getting started
 
-* How to run the test suite
+Install Homebrew
 
-* Services (job queues, cache servers, search engines, etc.)
+Install RVM
+Install Ruby and Rails
 
-* Deployment instructions
+Install all dependencies.
 
-* ...
+```bash
+$ bundle install
+```
+
+Create a Rails table.
+
+```bash
+$ rails db:create
+```
+
+Migrate the...
+
+```bash
+$ rails db:migrate
+```
+
+Seed the data.
+
+```bash
+$ rails db:seed
+```
+
+Open the Rails console and test out data.
+
+```bash
+$ rails c
+```
+
+---
+
+## Built With
+
+- [Ruby on Rails](https://rubyonrails.org/)
+- [GraphQL Ruby](https://graphql-ruby.org/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [GraphiQL Rails](https://github.com/rmosolgo/graphiql-rails)
