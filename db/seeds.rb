@@ -11,7 +11,7 @@ easy = Difficulty.create(name: "Easy")
 medium = Difficulty.create(name: "Medium")
 hard = Difficulty.create(name: "Hard")
 
-Algorithm.create(name: "Two Sum", description: "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order.", category_id: array.id, difficulty_id: easy.id, solution: "# Hello, *world*!")
+Algorithm.create(name: "Two Sum", description: "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order.", category_id: array.id, difficulty_id: easy.id)
 
 Algorithm.create(name: "Palindrome Pairs", description: "Given a list of unique words, return all the pairs of the distinct indices (i, j) in the given list, so that the concatenation of the two words words[i] + words[j] is a palindrome.", category_id: string.id, difficulty_id: hard.id,
   solution: "**Cornix** stagna imagine mirarique in favilla recordor flammiferas lucem tamen legesque manant.
