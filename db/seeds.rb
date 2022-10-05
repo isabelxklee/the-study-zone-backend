@@ -258,7 +258,7 @@ const trappingRainWater = (arr) => {
 
 Algorithm.create(name: "Binary Tree Paths", description: "Given the root of a binary tree, return all root-to-leaf paths in any order. A leaf is a node with no children.", category_id: binary_tree.id, difficulty_id: easy.id)
 
-Algorithm.create(name: "Backspace String Compare", description: "Given two strings s and t, return true if they are equal when both are typed into empty text editors. '#' means a backspace character. Note that after backspacing an empty text, the text will continue empty.", category_id: string.id, difficulty_id: easy.id, solution: `
+Algorithm.create(name: "Backspace String Compare", description: "Given two strings s and t, return true if they are equal when both are typed into empty text editors. '#' means a backspace character. Note that after backspacing an empty text, the text will continue empty.", category_id: string.id, difficulty_id: easy.id, solution: '
 
 _The time complexity of this solution is O(n) linear time._
 
@@ -269,7 +269,7 @@ _The time complexity of this solution is O(n) linear time._
 - Set 2 pointers, 1 at the end of each string.
 - Move the pointers towards the front of each string.
 - Keep track of any hash symbols that are encountered.
-- Then compare whatever's left over!
+- Then compare whatever\'s left over!
 
 ---
 
@@ -297,13 +297,13 @@ const backspaceCompare = (s, t) => {
 };
 ```
 
-3. Inside the `while` loop, we're going to write some logic that does the following:
+3. Inside the `while` loop, we\'re going to write some logic that does the following:
 
 - Count the number of hash symbols found in each string
 - Compare the strings
 - Move the pointers towards the front of the string
 
-4. Firstly, we're going to write a helper function to count the hash symbols. The arguments are going to be a string value and its pointer.
+4. Firstly, we\'re going to write a helper function to count the hash symbols. The arguments are going to be a string value and its pointer.
 
 ```javascript
 const hashCounter = (str, pointer) => {
@@ -320,7 +320,7 @@ const backspaceCompare = (s, t) => {
 };
 ```
 
-5. Inside the helper function, we're going to check if the element at the pointer's index is a hash.
+5. Inside the helper function, we\'re going to check if the element at the pointer\'s index is a hash.
 
 ```javascript
 const hashCounter = (str, pointer) => {
@@ -330,7 +330,7 @@ const hashCounter = (str, pointer) => {
 };
 ```
 
-6. If it _is_ a hash, then we're going to create a `count` variable and set it to 2.
+6. If it _is_ a hash, then we\'re going to create a `count` variable and set it to 2.
 
 > Note: This is because we have to move back 2 spaces when we find a hash symbol.
 
@@ -342,7 +342,7 @@ const hashCounter = (str, pointer) => {
 };
 ```
 
-7. Still inside the `if` statement, we're going to create a `while` loop. This loop is going to run while the count is greater than 0.
+7. Still inside the `if` statement, we\'re going to create a `while` loop. This loop is going to run while the count is greater than 0.
 
 ```javascript
 const hashCounter = (str, pointer) => {
@@ -371,7 +371,7 @@ const hashCounter = (str, pointer) => {
 };
 ```
 
-9. Then write an `if` statement that runs if we find another hash. We're going to add 2 to the count if this is true.
+9. Then write an `if` statement that runs if we find another hash. We\'re going to add 2 to the count if this is true.
 
 ```javascript
 const hashCounter = (str, pointer) => {
@@ -390,7 +390,7 @@ const hashCounter = (str, pointer) => {
 };
 ```
 
-10. And finally, outside of the original `if` statement, we're just going to return the pointer value!
+10. And finally, outside of the original `if` statement, we\'re just going to return the pointer value!
 
 ```javascript
 const hashCounter = (str, pointer) => {
@@ -411,7 +411,7 @@ const hashCounter = (str, pointer) => {
 };
 ```
 
-11. Now, back to our original function. Inside the `while` loop that checks if the s pointer or t pointer are greater than or equal to 0, we're going to call our helper function.
+11. Now, back to our original function. Inside the `while` loop that checks if the s pointer or t pointer are greater than or equal to 0, we\'re going to call our helper function.
 
 > Note: Make sure to call the helper function twice, so that it runs for each string.
 
@@ -444,9 +444,9 @@ const backspaceCompare = (s, t) => {
 };
 ```
 
-12. After that, we're going to write an `if/else` statement.
+12. After that, we\'re going to write an `if/else` statement.
 
-If the element at the s pointer _is not_ equal to the element at the t pointer, we're going to return false. This is because the first element of each string doesn't equate each other.
+If the element at the s pointer _is not_ equal to the element at the t pointer, we\'re going to return false. This is because the first element of each string doesn\'t equate each other.
 
 ```javascript
 const hashCounter = (str, pointer) => {
@@ -470,7 +470,7 @@ const backspaceCompare = (s, t) => {
 };
 ```
 
-13. Otherwise, we're going to decrement both pointers.
+13. Otherwise, we\'re going to decrement both pointers.
 
 ```javascript
 const hashCounter = (str, pointer) => {
@@ -495,7 +495,7 @@ const backspaceCompare = (s, t) => {
 };
 ```
 
-14. And finally, we're going to return `true` outside of the `while` loop!
+14. And finally, we\'re going to return `true` outside of the `while` loop!
 
 ```javascript
 const hashCounter = (str, pointer) => {
@@ -534,6 +534,6 @@ const backspaceCompare = (s, t) => {
   return true;
 };
 ``` 
-`)
+')
 
 puts "data has been seeded! 🍃"
